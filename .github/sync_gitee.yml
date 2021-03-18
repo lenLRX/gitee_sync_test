@@ -1,0 +1,10 @@
+steps:
+- name: Mirror the Github organization repos to Gitee.
+  uses: Yikun/hub-mirror-action@master
+  with:
+    src: github/lenLRX
+    dst: gitee/
+    dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+    dst_token: ${{ secrets.GITEE_TOKEN }}
+    account_type: user
+    static_list: 'gitee_sync_test'
